@@ -1,0 +1,12 @@
+.answer:checked + label{
+    border-width: 1px !important;
+    border-color: #0d6efd !important;
+    color: #0d6efd !important;
+    background: #f2f7ff;
+    font-weight: 500;
+}
+
+/* .answer:checked + label i{
+    display: block !important;
+    color: #309255 !important;
+} */

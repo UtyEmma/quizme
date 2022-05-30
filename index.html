@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./vendors/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="./vendors/bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./vendors/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quiz Me</title>
+</head>
+<body>
+
+    <div class="w-100 vh-100 bg-primary d-flex align-items-center justify-content-center">
+
+        <div class="w-50 md-w-75 h-75 bg-white shadow-lg rounded-3 p-5 card border-0">
+            <div class="card-header bg-transparent border-0 text-center p-0 rounded d-flex justify-content-between align-items-center mb-0">
+                <h3>Welcome to Quiz Me</h3>
+                <!-- <h5>Your Score - <span id="score">0</span></h5> -->
+            </div>
+
+            <div id="quiz" class="card-body  px-0 mt-0 pt-0" >
+                <div class="h-25 bg-dark rounded-3 shadow-sm text-white d-flex align-items-center p-4">
+                    <div>
+                        <p class="mb-0" id="serial-no">Question 1</p>
+                        <h4 id="question">Which of these cities is the capital of Eygpt?</h4>
+                    </div>
+                </div>
+
+                <p id="error-message" class="text-danger"></p>
+
+                <div class="mt-5">
+                    <div class="">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div>
+                                    <input id="answer-1" class="answer" name="answer" hidden type="radio">
+                                    <label for="answer-1" class="w-100 p-3 py-4 border rounded" style="cursor: pointer;" >
+                                        <p class="m-0">Baghdad</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <input id="answer-2" class="answer" name="answer" hidden type="radio">
+                                    <label for="answer-2" class="w-100 p-3 py-4 border rounded" style="cursor: pointer;" >
+                                        <p class="m-0">Cairo</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <input id="answer-3" class="answer" name="answer" hidden type="radio">
+                                    <label for="answer-3" class="w-100 p-3 py-4 border rounded" style="cursor: pointer;" >
+                                        <p class="m-0">Islamabad</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div>
+                                    <input id="answer-4" class="answer" name="answer" hidden type="radio">
+                                    <label for="answer-4" class="w-100 p-3 py-4 border rounded" style="cursor: pointer;" >
+                                        <p class="m-0">Kabul</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-0 pt-5 d-flex justify-content-between border-0 bg-transparent">
+                    <button class="btn btn-lg btn-primary" type="button"> <i class="fa-solid fa-chevron-left"></i> Previous</button>
+                    <button class="btn btn-lg btn-primary" onclick="submitAnswers()">Next <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div id="scoreboard" class="card-body justify-content-center align-items-center h-100">
+                <div class="text-center">
+                    <h1>Congratulations on finishing your Quiz</h1>
+
+                    <div class="mt-4">
+                        <div class="alert alert-primary">
+                            <h3>Here is your score</h3>
+                            <h1 id="score" >100</h1>
+                        </div>
+
+                        <button onclick="initializeQuiz()" class="btn btn-primary btn-lg px-5">Restart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
